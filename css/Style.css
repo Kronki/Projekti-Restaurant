@@ -427,7 +427,12 @@ form.subscribe-item button:hover {
     html {
         font-size: 8.5px;
     }
+
     .hero {
         height: 60vh;
+    }
+    
+    .section div, .content div {
+        margin-bottom: 2rem;
     }
 }
