@@ -234,7 +234,7 @@ body {
 }
 
 .article {
-    height: 20vh;
+    height: 15rem;
     background-color: var(--main-color);
     color:white;
     justify-content: space-around;
@@ -252,18 +252,18 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 3rem;
-
-    margin: 8rem 0;
+    width: 60%;
+    margin: 8rem auto;
 }
 
 .menu img {
     justify-self: end;
-    height:220px;
-    width: 700px;
+    height:100%;
+    width: 100%;
 }
 
 .content {
-    width: 60%;
+    width: 100%;
     background-color: white;
     justify-self: start;
     grid-column: 2 / -1;
@@ -274,7 +274,7 @@ body {
 .subscribe {
     scroll-snap-align: start;
     width:80%;
-    height:50vh;
+    height:30rem;
     margin: 0 auto;
     margin-top: 12rem;
     background-color: white;
@@ -334,6 +334,8 @@ form.subscribe-item button:hover {
     background-color: var(--main-color);
     color: white;
     position: relative;
+    padding-bottom: 3rem;
+    margin-top: 8rem;
 }
 
 .footer-child {
@@ -392,4 +394,16 @@ form.subscribe-item button:hover {
 .fa-instagram {
     background: #FF6F40;
     color: white;
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 8.5px;
+    }
 }
