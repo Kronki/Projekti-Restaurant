@@ -310,7 +310,7 @@ body {
 }
 
 .subscribe-item input {
-    padding:0.5rem;
+    padding: 1.2rem 0.7rem;
 }
 
 form input#email {
@@ -380,9 +380,9 @@ form.subscribe-item button:hover {
 }
 
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
+    padding: 1.25rem;
+    font-size: 1.875rem;
+    width: 3.125rem;
     text-align: center;
     text-decoration: none;
 }
