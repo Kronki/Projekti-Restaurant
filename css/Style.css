@@ -79,11 +79,6 @@ body {
     margin-top: 4rem;
 }
 
-.position2 {
-    grid-column: 2 / -1;
-    grid-row: 1 / -1;
-}
-
 /* End of Helper Classes */
 
 .hero {
@@ -129,8 +124,8 @@ body {
     text-align: center;
     color:var(--main-color);
     height: 80%;
-    padding: 100px;
-    margin-top: 10rem;
+    padding: 6rem;
+    margin-top: 4rem;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -446,6 +441,7 @@ form.subscribe-item button:hover {
 
 @media (max-width:1100px) {
     .hero-description {
+        margin: 0;
         align-items: center;
     }
     .hero-description h2 {
@@ -462,6 +458,10 @@ form.subscribe-item button:hover {
 }
 
 @media (max-width: 900px) {
+    .hero {
+        height: 80vh;
+    }
+    
     html {
         font-size: 13px;
     }
@@ -536,15 +536,5 @@ form.subscribe-item button:hover {
         padding: 0.75rem;
         font-size: 1.5rem;
         width: 2.75rem;
-    }
-}
-
-@media (max-height: 600px) {
-    .hero-description {
-        margin-top: 0;
-        padding-top: 0;
-    }
-    .hero-button {
-        margin-top: 2rem !important;
     }
 }
