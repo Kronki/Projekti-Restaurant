@@ -538,3 +538,13 @@ form.subscribe-item button:hover {
         width: 2.75rem;
     }
 }
+
+@media (max-height: 450px) {
+    .hero-description {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .hero-button {
+        margin-top: 2rem !important;
+    }
+}
