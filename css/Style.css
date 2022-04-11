@@ -539,7 +539,7 @@ form.subscribe-item button:hover {
     }
 }
 
-@media (max-height: 450px) {
+@media (max-height: 600px) {
     .hero-description {
         margin-top: 0;
         padding-top: 0;
