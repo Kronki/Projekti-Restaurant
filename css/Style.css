@@ -125,11 +125,13 @@ body {
 }
 
 .hero-description {
-    margin-top: 12rem;
     width:80%;
     text-align: center;
     color:var(--main-color);
     height: 80%;
+    padding: 100px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .hero-description h2 {
@@ -139,21 +141,20 @@ body {
     line-height: 1.5;
 }
 
-.hero-description div.m-top {
+.hero-description .hero-button {
     width: 40%;
     font-size:3.4rem;
 }
 
-.hero-description div.m-top button {
-    width: 40%;
+.hero-description div.hero-button button {
+    width: 10rem;
     background: transparent;
     color: var(--main-color);
     border: 2px solid var(--main-color);
     font-weight: 600;
 }
 
-.hero-description div.m-top button:hover {
-    width: 40%;
+.hero-description .btn:hover {
     background: orange;
     color: white;
     border: 2px solid var(--main-color);
@@ -188,19 +189,18 @@ body {
     gap: 2rem;
     text-align: center;
     background-color: white;
-    padding:0 2rem;
 }
 
 .section-item {
-    justify-self: end;
+    justify-self: start;
     line-height: 1.5;
     height: 100%;
     width: 100%;
-    box-shadow: 1px 2px 8px rgba(0,0,0,0.2)
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
+    padding: 2rem;
 }
 
 .section-item p:first-child, .content p:first-child {
-    margin-top: 2rem;
     font-size:0.9rem;
     font-weight:600;
     letter-spacing: 1.5px;
@@ -209,7 +209,7 @@ body {
 }
 
 .section-item h1, .content h1 {
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size:4.5rem;
     color:var(--main-color);
 }
@@ -217,28 +217,30 @@ body {
     color:brown;
 }
 
-.section-item button, .content button {
+.content-btn {
+    margin-top: 2rem;
+}
+
+.btn {
     color:white;
     background-color: var(--main-color);
-    width: 35%;
+    width: 10rem;
     height: 4rem;
-    margin-top: 3rem;
     border-radius: 2px;
     font-size: 1.5rem;
     border: 0;
     align-self: center;
 }
 
-.section-item button:hover, .content button:hover {
+.btn:hover {
     color: var(--main-color);
     background-color: white;
     border: 2px solid var(--main-color);
     cursor: pointer;
 }
 
-.section img {
-    width:100%;
-    height: 100%;
+.chef-img {
+    background-image: url(../foto/chef.jpg);
 }
 
 .article {
@@ -264,6 +266,27 @@ body {
     margin: 8rem auto;
 }
 
+.chef-img,
+.menu-first-img,
+.menu-second-img,
+.menu-third-img {
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-first-img {
+    background-image: url(../foto/Menu/Burrito2.jpg);
+}
+
+.menu-second-img {
+    background-image: url(../foto/Menu/Chilaquiles2.jpg);
+}
+
+.menu-third-img {
+    background-image: url(../foto/Menu/Tamales2.jpg);
+}
+
+
 .menu img {
     justify-self: end;
     height:100%;
@@ -278,6 +301,7 @@ body {
     grid-column: 2 / -1;
     grid-row: 1 / -1;
     box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
+    padding: 2rem;
 }
 
 .subscribe {
@@ -406,50 +430,85 @@ form.subscribe-item button:hover {
     color: white;
 }
 
-@media (min-width: 1441px) and (max-width: 1750px) {
-    .section div, .content div {
-        margin-bottom: 2rem;
-    }
-}
-
-@media (max-width: 1440px) {
-    html {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1315px) {
-    
-}
-
-@media (min-width: 1025px) and (max-width: 1435px) {
-    .hero {
-        height: 80vh;
-    }
-    .section div, .content div {
-        margin-bottom: 2rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    html {
-        font-size: 8.5px;
-    }
-
-    .hero {
-        height: 60vh;
-    }
-
-    .section div, .content div {
-        margin-bottom: 2rem;
-    }
-}
-@media (min-height: 250px) and (max-height: 645px) {
+@media (max-width:1400px) {
     .hero-description {
-        margin-top: 10rem;
+        align-items: center;
+    }
+    .hero-description h2 {
+        width:80% !important;
+    }
+    .section,
+    .menu {
+        width:80%;
+    }
+}
+
+@media (max-width:1100px) {
+    .hero-description {
+        align-items: center;
+    }
+    .hero-description h2 {
+        width:100% !important;
+    }
+    .section,
+    .menu {
+        width: 90%;
+        margin: inherit  2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-description {
+        align-items: center;
+    }
+
+    .hero-description h2 {
+        width:100% !important;
+    }
+
+    .section {
+        width: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    .article {
+        height:25rem;
+
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        column-gap: 5rem;
+    }
+
+    .menu {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .menu .content {
+        grid-row: 2/-1;
+        grid-column: 1/-1;
+    }
+
+    .subscribe {
+        gap: 3rem;
+    }
+
+    .subscribe p {
+        text-align: center;
+    }
+
+    .subscribe-item {
+        margin-top: 0;
+        gap: 1.5rem;
+        flex-direction: column;
     }
     
-    .hero-description h2{
-        font-size: 2rem;
+    .footer-child {
+        width: 80%;
+    }
+
+    .icons {
+        padding: 1rem;
     }
 }
