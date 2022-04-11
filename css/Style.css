@@ -308,8 +308,8 @@ body {
     scroll-snap-align: start;
     width:80%;
     height:30rem;
-    margin: 0 auto;
-    margin-top: 12rem;
+    margin: 12rem auto 0 auto;
+    padding: 1rem;
     background-color: white;
     flex-direction: column;
     align-items: center;
@@ -318,7 +318,7 @@ body {
 
 .subscribe h1 {
     letter-spacing: -0.5;
-    margin-top: 5rem;
+    margin-top: 3rem;
     font-size: 5rem;
 }
 
@@ -455,15 +455,24 @@ form.subscribe-item button:hover {
         width: 90%;
         margin: inherit  2rem;
     }
+    .subscribe p {
+        text-align: center;
+    }
 }
 
 @media (max-width: 900px) {
+    html {
+        font-size: 13px;
+    }
+
     .hero-description {
         align-items: center;
+        width: 100%;
+        margin-top: 10rem;
     }
 
     .hero-description h2 {
-        width:100% !important;
+        width:100%;
     }
 
     .section {
@@ -510,5 +519,16 @@ form.subscribe-item button:hover {
 
     .icons {
         padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+
+    .hero-description {
+        width: 100%;
+        margin-top: 10rem;
     }
 }
