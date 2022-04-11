@@ -533,8 +533,8 @@ form.subscribe-item button:hover {
         padding-right: 0;
     }
     .fa {
-        padding: 1rem;
-        font-size: 1.75rem;
-        width: 3rem;
+        padding: 0.75rem;
+        font-size: 1.5rem;
+        width: 2.75rem;
     }
 }
