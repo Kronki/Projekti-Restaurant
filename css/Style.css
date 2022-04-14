@@ -88,14 +88,49 @@ body {
     flex-direction: column;
 }
 
+#menu-top.hero {
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+#menu-top.hero .hero-h1 {
+    position: absolute;
+    justify-self: center;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    top: 50%;
+    text-shadow: 1px 1px 1px rgb(78, 78, 78);
+}
+
+.menu-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    color: var(--main-color);
+
+    position: absolute;
+    bottom: 5%;
+    transition: all 0.2s;
+}
+
+.menu-icon:active {
+    color:rgb(230, 230, 230);
+}
+
 .navbar {
-    height: 20%;
+    margin: 1.5rem auto;
 }
 
 .navbar h1 {
     color: var(--main-color);
     font-size: 4rem;
     font-family: 'Smokum', cursive;
+}
+
+.hero div h1 {
+    color: var(--main-color);
+    font-size: 4rem;
 }
 
 .navbar span {
