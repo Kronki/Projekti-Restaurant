@@ -159,6 +159,7 @@ body {
     border: none;
     padding: 1.6rem;
     display: none;
+    cursor: pointer;
 }
 
 .icon {
@@ -575,6 +576,9 @@ form.subscribe-item button:hover {
     .open-nav ion-icon[name="close-outline"] {
         display: block;
         color: gray;
+        position: absolute;
+        right: 200%;
+        top: 30%;
     }
 
     .open-nav ion-icon[name="menu-outline"] {
